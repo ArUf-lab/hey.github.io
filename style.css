@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000428, #004e92);
+    color: white;
+    text-align: center;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .headline {
+    font-size: 2.5rem;
+    margin: 20px 0;
+  }
+  
+  .message {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  #countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .time {
+    font-size: 1.2rem;
+  }
+  
+  #gallery {
+    margin: 20px 0;
+  }
+  
+  #gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s;
+  }
+  
+  #gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  #startFireworks {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #startFireworks:hover {
+    background: blue;
+  }
+  #fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .firework {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0;
+    animation: fireworkAnimation 2s ease-in-out infinite;
+  }
+  
+  @keyframes fireworkAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    25% {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(2);
+    }
+    75% {
+      opacity: 0.5;
+      transform: scale(1.8);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+    
